@@ -6,7 +6,7 @@
 /*   By: jeberle <jeberle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 17:14:16 by jeberle           #+#    #+#             */
-/*   Updated: 2024/09/10 17:35:10 by jeberle          ###   ########.fr       */
+/*   Updated: 2024/09/10 18:38:28 by jeberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class Zombie
 	public:
 		Zombie(std::string name);
 		~Zombie();
+
+	void	announce(void);
 };
 
 #endif
