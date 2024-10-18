@@ -6,7 +6,7 @@
 /*   By: jeberle <jeberle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 08:26:49 by jeberle           #+#    #+#             */
-/*   Updated: 2024/10/18 09:05:23 by jeberle          ###   ########.fr       */
+/*   Updated: 2024/10/18 11:12:55 by jeberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ class Weapon {
 	private:
 		std::string	type;
 	public:
-		Weapon(std::string type)
+		Weapon(std::string type);
 		~Weapon();
-		const std::string&	getType() const;
+		const				std::string& getType() const;
 		void				setType(std::string type);
-}
+};
 #endif
 
