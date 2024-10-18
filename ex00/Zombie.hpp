@@ -6,7 +6,7 @@
 /*   By: jeberle <jeberle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 17:14:16 by jeberle           #+#    #+#             */
-/*   Updated: 2024/09/10 18:38:28 by jeberle          ###   ########.fr       */
+/*   Updated: 2024/09/11 12:25:54 by jeberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,6 @@ class Zombie
 	void	announce(void);
 };
 
+Zombie* newZombie( std::string name );
+void randomChump( std::string name );
 #endif

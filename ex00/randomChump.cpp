@@ -6,8 +6,14 @@
 /*   By: jeberle <jeberle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 17:13:46 by jeberle           #+#    #+#             */
-/*   Updated: 2024/09/10 17:14:34 by jeberle          ###   ########.fr       */
+/*   Updated: 2024/09/11 12:33:27 by jeberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./Zombie.hpp"
+
+void randomChump( std::string name )
+{
+	Zombie z(name);
+	z.announce();
+}
