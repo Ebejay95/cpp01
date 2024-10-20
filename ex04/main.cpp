@@ -6,7 +6,7 @@
 /*   By: jeberle <jeberle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 11:26:48 by jeberle           #+#    #+#             */
-/*   Updated: 2024/10/20 07:29:08 by jeberle          ###   ########.fr       */
+/*   Updated: 2024/10/20 08:37:26 by jeberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	filename = argv[1];
-	std::ifstream file(filename);
-	if (!file.good())
+	std::ifstream file(filename.c_str());
+	if (!file.is_open())
 	{
 		std::cerr << "file " << filename << " not found"<< std::endl;
 		return (1);
@@ -56,8 +56,8 @@ int	main(int argc, char **argv)
 	modified = findandreplace(fileContent, argv[2], argv[3]);
 
 	std::string outFilename = filename + ".replace";
-	std::ofstream outFile(outFilename);
-	if (!outFile.good()) {
+	std::ofstream outFile(outFilename.c_str());
+	if (!outFile.is_open()) {
 		std::cerr << "Error: Unable to create file " << outFilename << std::endl;
 		return (1);
 	}

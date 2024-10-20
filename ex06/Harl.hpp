@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeberle <jeberle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/20 07:33:12 by jeberle           #+#    #+#             */
-/*   Updated: 2024/10/20 08:41:45 by jeberle          ###   ########.fr       */
+/*   Created: 2024/10/20 08:13:32 by jeberle           #+#    #+#             */
+/*   Updated: 2024/10/20 08:14:10 by jeberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./Harl.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-int	main(void)
+# include <iostream>
+
+class Harl
 {
-	Harl *harl = new Harl();
-	std::cout << std::endl;
-	harl->complain("DEBUG");
-	std::cout << std::endl;
-	harl->complain("INFO");
-	std::cout << std::endl;
-	harl->complain("WARNING");
-	std::cout << std::endl;
-	harl->complain("ERROR");
-	std::cout << std::endl;
-	harl->complain("INVALID");
-	std::cout << std::endl;
-	delete harl;
-	return (0);
-}
+	private:
+		std::string	name;
+		void	debug( void );
+		void	info( void );
+		void	warning( void );
+		void	error( void );
+
+	public:
+		Harl();
+		Harl(std::string name);
+		~Harl();
+		void	complain( std::string level );
+};
+
+#endif
